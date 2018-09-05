@@ -1,4 +1,5 @@
-# 
+require 'tts' 
+
 
 class Book
     attr_accessor :title, :language, :author, :publisher
@@ -65,7 +66,7 @@ class Book
     end
     def self.build_book
         args = {}
-      
+    
         print " Book title :"
         args[:title] = gets.chomp.strip
         

@@ -1,5 +1,6 @@
 
 require 'book'
+require 'tts'
 class Library
 
     class Config
@@ -37,7 +38,7 @@ class Library
             #repeat until user quits
             
          end
-
+         conclusion
     end
 def get_action
         action = nil
@@ -76,7 +77,10 @@ end
      books = Book.saved_books
 
     # Display Books
+    
     output_book_table(books)
+    
+
  end
 # methode add
 def add
@@ -115,13 +119,22 @@ end
     def introdcution
                 #puts "-" * "<<< Welcome to the library >>>".length
                 puts  "<<<\n\n Welcome to the library>>> \n\n"
-                puts  "This an interaction guide to help you find your book \n\n"
-                #puts "-" * "<<< Welcome to the library >>>".length
+                puts  "This an interactive guide to help you find your book \n\n"
+                "Welcome to the library".play
+                "This is an interactive guide to help you find your book".play
+                "Please type one of the following".play
+                "list".play
+                "alternatively, type find".play
+                "then a key word to search".play
+                puts "-" * "<<< Welcome to the library >>>".length
      end
 
      def conclusion
                  #puts "-" * "<<< Thank you have a good day >>>".length
-                    puts "<<< Thank you have a good day >>>"
+                    
+                    puts "Thank you for visting the library, have a good day"
+                    "Thank you for visting the library, have a good day".play
+                    #"Thank you have a good day".play
                  #puts "-" * "<<< Thank you have a good day >>>".length
      end
 
@@ -136,6 +149,7 @@ end
         print " " + "Author".rjust(8) + "\n"
         print " " + "Publisher".rjust(8) + "\n"
         puts "-" * 60
+        
 
        books.each do |bk|
           line =  " " << bk.title.ljust(30)
@@ -143,6 +157,7 @@ end
           line << " " + bk.author.rjust(6)
           line << " " + bk.publisher.rjust(6)
           puts line
+          line.play
        end
         puts "No listings found" if books.empty?
         puts "-" * 60
