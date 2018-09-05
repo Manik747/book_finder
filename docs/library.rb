@@ -13,7 +13,6 @@ class Library
         #locate the book text file at path
          Book.filepath = path
          if Book.file_usable?
-            puts "found the book"
         # or create a new file
          elsif Book.create_file
         #exit if create fails
@@ -105,7 +104,7 @@ def find(keyword="")
         bk.title.downcase.include?(keyword.downcase) ||
         bk.language.downcase.include?(keyword.downcase) ||
         bk.author.downcase.include?(keyword.downcase) ||
-        bk.publisher.downcase.include?(keyword.downcase)
+        bk.publisher.downcase.include?(keyword.downcase) 
      end
        output_book_table(found)
     else
@@ -118,7 +117,7 @@ end
 
     def introdcution
                 #puts "-" * "<<< Welcome to the library >>>".length
-                puts  "<<<\n\n Welcome to the library>>> \n\n"
+                puts  "<<<Welcome to the library>>> \n\n"
                 puts  "This an interactive guide to help you find your book \n\n"
                 "Welcome to the library".play
                 "This is an interactive guide to help you find your book".play
@@ -160,6 +159,7 @@ end
           line.play
        end
         puts "No listings found" if books.empty?
+        
         puts "-" * 60
       end
     

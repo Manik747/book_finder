@@ -9,6 +9,7 @@ class Book
         @language  = args[:language]  ||  ""
         @author    = args[:author]    ||  ""
         @publisher = args[:publisher] ||  ""
+       
     end
     
     @@filepath = nil
