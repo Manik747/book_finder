@@ -36,6 +36,7 @@ until user =="admin"
         library = Library.new('books.txt')
         library.start_up!        
     end
+    exit if ["quit","q","exit"]
 end
 
 

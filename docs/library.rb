@@ -144,9 +144,9 @@ end
 
     def output_book_table(books=[])
         print " " + "Title".ljust(20)
-        print " " + "Language".ljust(10)
-        print " " + "Author".rjust(8) + "\n"
-        print " " + "Publisher".rjust(8) + "\n"
+        print " " + "Language".ljust(8)
+        print " " + "Author".rjust(6) + "\n"
+        print " " + "Publisher".rjust(6) + "\n"
         puts "-" * 60
         
 
