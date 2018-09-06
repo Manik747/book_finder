@@ -12,18 +12,13 @@
 # the login  Feature to access the app
 
 
-
-# using a module readline
-
-require 'readline'
 user = ""
 tries = 0
 until user =="admin"
-    prompt = "Please enter a valid password :"
-    response = Readline.readline(prompt, true)
-    #user = gets.chomp.strip
+    puts "Please enter a valid password :"
+    user = gets.chomp.strip
     tries += 1
-    if response != "admin"
+    if user != "admin"
         if tries == 3
             puts "#{tries} times incorrect password You exceded the number of tries please come back in 30 minutes "
             exit!
@@ -37,7 +32,6 @@ until user =="admin"
         library.start_up!        
     end
 end
-
 
 
 

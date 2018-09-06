@@ -1,3 +1,0 @@
-Rubae	Ruby	The Reubens	Kaiser Chiefs
-Python	Python	Snake	Charmer
-Hello	Hello	Hello	Hello
